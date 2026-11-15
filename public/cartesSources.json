@@ -1,0 +1,20 @@
+{
+    "cartes": [
+        {
+            "id": 1,
+            "nature": "Mixte",
+            "thème": "Petit frère à vendre",
+            "durée": 2,
+            "catégorie": "Libre",
+            "difficulté": "Facile"
+        },
+        {
+            "id": 2,
+            "nature": "Mixte",
+            "thème": "La machine",
+            "durée": 2,
+            "catégorie": "Libre",
+            "difficulté": "Facile"
+        }
+    ]
+}
