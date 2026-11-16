@@ -9,6 +9,11 @@ const sql = neon(process.env.DATABASE_URL);
 app.use(express.json());
 app.use(express.static("public"));
 
+// Homepage
+app.get("/", (req, res) => {
+    res.redirect("/index.html");
+});
+
 // Test Neon connection
 app.get("/api/test", async (req, res) => {
     try {
