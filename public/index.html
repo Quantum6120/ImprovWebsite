@@ -8,28 +8,197 @@
     <link rel="stylesheet" href="improStyle.css">
 </head>
 <body>
+
+    <!-- CARD DISPLAY -->
     <div id="carteContainer">
         <h1>ImproAssist</h1>
-        <button id="boutonCherche">Tirer une carte</button>
+        <button type="button" id="boutonCherche" class="interactiveStuff">
+            Tirer une carte
+        </button>
+        <br>
         <p id="carteNature"></p>
-        <h2 id="carteThème"></h2>
+        
         <p id="carteDurée"></p>
+        
+        <p id="carteJoueurs"></p>
+        
         <p id="carteCatégorie"></p>
+
+        <h2 id="carteThème"></h2>
+
+        <p id="tirage-status"></p>
     </div>
 
-    <h3>Ajouter une carte:</h3>
-    <input type="text" id="carteNatureInsertion" placeholder="Nature">
-    <br>
-    <input type="text" id="carteThèmeInsertion" placeholder="Thème">
-    <br>
-    <input type="text" id="carteDuréeInsertion" placeholder="Durée">
-    <br>
-    <input type="text" id="carteCatégorieInsertion" placeholder="Catégorie">
-    <br>
-    <br>
-    <button id="boutonSoumettre">Soumettre</button>
+    <!-- FILTERS -->
+    <div id="filtersMasterContainer">   
+        <h2>Filtres</h2>
+
+        <div id="filterContainer">
+
+            <!-- Nature -->
+            <div class="textGroup">
+                <label for="filter-nature">Nature:</label>
+
+                <select id="filter-nature" class="interactiveStuff">
+                    <option value="">Toutes</option>
+                    <option value="mixte">Mixte</option>
+                    <option value="comparée">Comparée</option>
+                </select>
+            </div>
+
+            <!-- Duration -->
+            <div class="textGroup">
+                <label for="filter-duration">Durée:</label>
+
+                <select id="filter-duration" class="interactiveStuff">
+                    <option value="">Toutes</option>
+                    <option value="1 min">1 min</option>
+                    <option value="1 min 30">1 min 30</option>
+                    <option value="2 min">2 min</option>
+                    <option value="2 min 30">2 min 30</option>
+                    <option value="3 min">3 min</option>
+                </select>
+            </div>
+
+            <!-- Players -->
+            <div class="textGroup">
+                <label for="filter-numberofplayers">Joueurs:</label>
+
+                <select id="filter-numberofplayers" class="interactiveStuff">
+                    <option value="">Tous</option>
+                    <option value="1 par équipe">1 par équipe</option>
+                    <option value="2 par équipe">2 par équipe</option>
+                    <option value="3 par équipe">3 par équipe</option>
+                    <option value="4 par équipe">4 par équipe</option>
+                    <option value="Illimité">Illimité</option>
+                </select>
+            </div>
 
 
-    <script src="improScript.js"></script>
+            <!-- Difficulty -->
+            <div class="textGroup">
+                <label for="filter-difficulty">Difficulté:</label>
+
+                <select id="filter-difficulty" class="interactiveStuff">
+                    <option value="">Toutes</option>
+                    <option value="easy">Facile</option>
+                    <option value="medium">Moyenne</option>
+                    <option value="hard">Difficile</option>
+                </select>
+            </div>
+
+
+            <!-- Category -->
+            <div class="textGroup">
+                <label for="filter-category">Catégorie:</label>
+
+                <input
+                    type="text"
+                    id="filter-category"
+                    class="interactiveStuff"
+                    placeholder="Rechercher une catégorie"
+                >
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ADD A CARD -->
+    <div id="cardContainer">
+        <h2>Ajouter une carte</h2>
+
+        <form id="card-form">
+
+            <!-- Nature -->
+             <div class="textGroup">
+                <label for="nature">Nature:</label>
+
+                <select id="nature" class="interactiveStuff" required>
+                    <option value="">Choisissez une nature</option>
+                    <option value="mixte">Mixte</option>
+                    <option value="comparée">Comparée</option>
+                </select>
+            </div>
+
+            <!-- Duration -->
+             <div class="textGroup">
+                <label for="duration">Durée:</label>
+
+                <select id="duration" class="interactiveStuff" required>
+                    <option value="">Choisissez une durée</option>
+                    <option value="1 min">1 min</option>
+                    <option value="1 min 30">1 min 30</option>
+                    <option value="2 min">2 min</option>
+                    <option value="2 min 30">2 min 30</option>
+                    <option value="3 min">3 min</option>
+                </select>
+            </div>
+
+            <!-- Players -->
+            <div class="textGroup">
+                <label for="numberofplayers">Nombre de joueurs:</label>
+
+                <select id="numberofplayers" class="interactiveStuff"required>
+                    <option value="">Choisissez le nombre</option>
+                    <option value="1 par équipe">1 par équipe</option>
+                    <option value="2 par équipe">2 par équipe</option>
+                    <option value="3 par équipe">3 par équipe</option>
+                    <option value="4 par équipe">4 par équipe</option>
+                    <option value="Illimité">Illimité</option>
+                </select>
+            </div>
+
+            <!-- Difficulty -->
+            <div class="textGroup">
+                <label for="difficulty">Difficulté:</label>
+
+                <select id="difficulty" class="interactiveStuff"required>
+                    <option value="">Choisissez une difficulté</option>
+                    <option value="easy">Facile</option>
+                    <option value="medium">Moyenne</option>
+                    <option value="hard">Difficile</option>
+                </select>
+            </div>
+
+            <!-- Category -->
+            <div class="textGroup">
+                <label for="category">Catégorie:</label>
+
+                <input
+                    type="text"
+                    id="category"
+                    class="interactiveStuff"
+                    placeholder="Entrez une catégorie"
+                    required
+                >
+            </div>
+
+
+            <!-- Theme -->
+            <div class="textGroup">
+                <label for="theme">Thème:</label>
+
+                <textarea
+                    id="theme"
+                    class="interactiveStuff"
+                    placeholder="Entrez le thème"
+                    required
+                ></textarea>
+            </div>
+
+            <div id="submit-div">
+                <button type="submit" class="interactiveStuff">
+                    Sauvegarder la carte
+                </button>
+            </div>
+
+        </form>
+
+            <p id="card-status"></p>
+
+    </div>
+
+
+    <script src="improScript.js" defer></script>
 </body>
 </html>
