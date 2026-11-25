@@ -1,0 +1,40 @@
+body{
+    min-height: 820px;
+    border: 4px solid black;
+    display : flex;
+    justify-content: flex-center;
+}
+
+#carteContainer {
+    flex: 1;
+    padding: 20px;
+    background-color: #f6ff00;
+}
+#filtersMasterContainer {
+    flex: 1;
+    padding: 20px;
+    background-color: #00ff00;
+}
+
+#cardContainer {
+    flex: 1;
+    padding: 20px;
+    background-color: #ff0000;
+}
+
+.textGroup {
+    display: flex;
+    align-items: center;
+    gap : 3px;
+    padding: 20px;
+}
+
+#submit-div{
+    display: flex;
+    justify-content: center;
+}
+
+.interactiveStuff{
+    background-color: #ffffff;
+    border-radius: 5px;
+}
